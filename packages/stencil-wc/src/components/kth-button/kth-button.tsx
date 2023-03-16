@@ -1,4 +1,4 @@
-import { Component, h } from '@stencil/core';
+import { Component, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'kth-button',
@@ -6,9 +6,11 @@ import { Component, h } from '@stencil/core';
   shadow: true,
 })
 export class KthButton {
+  @Prop() disabled: boolean;
+
   render() {
     return (
-      <button>
+      <button disabled={this.disabled}>
         <slot></slot>
       </button>
     );
