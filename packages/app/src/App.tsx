@@ -1,4 +1,7 @@
 import React from "react";
+import { MyComponent, defineCustomElements } from "stencil-react";
+
+defineCustomElements();
 
 export default function App() {
   const [loading, setLoading] = React.useState(false);
@@ -20,7 +23,7 @@ export default function App() {
   return (
     <div>
       <h1>Level 1</h1>
-      <div>Hello world</div>
+      <MyComponent first="Your" last="Name" />
       <h1>Level 2</h1>
       <button onClick={handleClick} disabled={loading}>
         {loading ? "Loading..." : "Click me!"}
