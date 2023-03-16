@@ -11,9 +11,11 @@ export const config: Config = {
     reactOutputTarget({
       componentCorePackage: 'stencil-wc',
       proxiesFile: '../stencil-react/lib/components/index.ts',
+      includeImportCustomElements: true,
     }),
     {
       type: 'dist-custom-elements',
+      generateTypeDeclarations: true,
     },
     {
       type: 'docs-readme',
