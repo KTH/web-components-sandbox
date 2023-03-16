@@ -1,7 +1,7 @@
 import React from "react";
-import { MyComponent, KthButton, defineCustomElements } from "stencil-react";
+import { MyComponent, KthButton } from "stencil-react";
 
-defineCustomElements();
+// defineCustomElements();
 
 export default function App() {
   const [loading, setLoading] = React.useState(false);
@@ -16,7 +16,7 @@ export default function App() {
     };
   }, [loading]);
 
-  function handleClick(event: React.MouseEvent<HTMLButtonElement>) {
+  function handleClick(event: React.MouseEvent<HTMLKthButtonElement>) {
     console.log(`I, "${event.currentTarget.textContent}", am clicked`);
     setLoading(true);
   }
