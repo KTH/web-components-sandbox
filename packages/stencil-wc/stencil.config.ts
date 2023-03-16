@@ -19,6 +19,7 @@ export const config: Config = {
     },
     reactOutputTarget({
       componentCorePackage: 'stencil-wc',
+      customElementsDir: 'dist/components',
       proxiesFile: '../stencil-react/lib/components/index.ts',
       includeImportCustomElements: true,
     }),
