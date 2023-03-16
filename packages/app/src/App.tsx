@@ -19,9 +19,13 @@ export default function App() {
   }
   return (
     <div>
+      <h1>Level 1</h1>
+      <div>Hello world</div>
+      <h1>Level 2</h1>
       <button onClick={handleClick} disabled={loading}>
-        Click me!
+        {loading ? "Loading..." : "Click me!"}
       </button>
+      <h1>Level 3</h1>
       <div>I am a tooltip</div>
     </div>
   );
