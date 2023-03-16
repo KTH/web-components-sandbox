@@ -10,7 +10,7 @@ export const config: Config = {
     },
     reactOutputTarget({
       componentCorePackage: 'stencil-wc',
-      proxiesFile: '../stencil-react/components/index.ts',
+      proxiesFile: '../stencil-react/lib/components/index.ts',
     }),
     {
       type: 'dist-custom-elements',
