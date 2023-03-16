@@ -18,9 +18,6 @@ export const config: Config = {
       generateTypeDeclarations: true,
     },
     {
-      type: 'docs-readme',
-    },
-    {
       type: 'www',
       serviceWorker: null, // disable service workers
     },
