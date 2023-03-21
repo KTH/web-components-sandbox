@@ -29,8 +29,8 @@ export default function App() {
         {loading ? "Loading..." : "Click me!"}
       </KthButton>
       <h1>Level 3</h1>
-      <KthTooltip message="This is a tooltip">
-        <button slot="tooltip-target">Click me</button>
+      <KthTooltip message="This is a extreeeemely long tooltip">
+        Hello world
       </KthTooltip>
     </div>
   );
