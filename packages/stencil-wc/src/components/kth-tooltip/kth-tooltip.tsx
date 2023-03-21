@@ -1,4 +1,4 @@
-import { Component, Host, h } from '@stencil/core';
+import { Component, Host, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'kth-tooltip',
@@ -6,13 +6,14 @@ import { Component, Host, h } from '@stencil/core';
   shadow: true,
 })
 export class KthTooltip {
+  @Prop() message: string;
 
   render() {
     return (
       <Host>
-        <slot></slot>
+        <slot name="tooltip-target"></slot>
+        <div>{this.message}</div>
       </Host>
     );
   }
-
 }

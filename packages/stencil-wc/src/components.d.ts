@@ -9,6 +9,9 @@ export namespace Components {
     interface KthButton {
         "disabled": boolean;
     }
+    interface KthTooltip {
+        "message": string;
+    }
     interface MyComponent {
         /**
           * The first name
@@ -31,6 +34,12 @@ declare global {
         prototype: HTMLKthButtonElement;
         new (): HTMLKthButtonElement;
     };
+    interface HTMLKthTooltipElement extends Components.KthTooltip, HTMLStencilElement {
+    }
+    var HTMLKthTooltipElement: {
+        prototype: HTMLKthTooltipElement;
+        new (): HTMLKthTooltipElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
@@ -39,12 +48,16 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "kth-button": HTMLKthButtonElement;
+        "kth-tooltip": HTMLKthTooltipElement;
         "my-component": HTMLMyComponentElement;
     }
 }
 declare namespace LocalJSX {
     interface KthButton {
         "disabled"?: boolean;
+    }
+    interface KthTooltip {
+        "message"?: string;
     }
     interface MyComponent {
         /**
@@ -62,6 +75,7 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "kth-button": KthButton;
+        "kth-tooltip": KthTooltip;
         "my-component": MyComponent;
     }
 }
@@ -70,6 +84,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "kth-button": LocalJSX.KthButton & JSXBase.HTMLAttributes<HTMLKthButtonElement>;
+            "kth-tooltip": LocalJSX.KthTooltip & JSXBase.HTMLAttributes<HTMLKthTooltipElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
     }

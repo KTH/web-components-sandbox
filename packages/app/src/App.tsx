@@ -1,5 +1,5 @@
 import React from "react";
-import { MyComponent, KthButton } from "stencil-react";
+import { MyComponent, KthButton, KthTooltip } from "stencil-react";
 
 // defineCustomElements();
 
@@ -29,7 +29,9 @@ export default function App() {
         {loading ? "Loading..." : "Click me!"}
       </KthButton>
       <h1>Level 3</h1>
-      <div>I am a tooltip</div>
+      <KthTooltip message="This is a tooltip">
+        <button slot="tooltip-target">Click me</button>
+      </KthTooltip>
     </div>
   );
 }
