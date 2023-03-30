@@ -23,6 +23,7 @@ export default function App() {
   return (
     <div>
       <h1>Level 1</h1>
+      <button>Normal button</button>
       <MyComponent first="Your" last="Name" />
       <h1>Level 2</h1>
       <KthButton onClick={handleClick} disabled={loading}>

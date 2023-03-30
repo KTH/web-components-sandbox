@@ -1,0 +1,16 @@
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  border: 3px solid black;
+  --custom-padding: 3rem;
+}
+
+div {
+  border: inherit;
+}
+
+button {
+  border: none;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: rebeccapurple;
+  padding: var(--custom-padding);
+}
